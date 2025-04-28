@@ -47,13 +47,13 @@ const UpdateCoffee = () => {
                 <div className="md:flex gap-4 items-center justify-center">
                     <div className="md:w-1/2">
                         <fieldset className="fieldset">
-                            <span className="text-lg">Coffee Name</span>
+                            <span className="text-lg text-gray-800">Coffee Name</span>
                             <input type="text" name="name" defaultValue={name} className="input w-full" placeholder="Coffee Name" />
                         </fieldset>
                     </div>
                     <div className="md:w-1/2">
                         <fieldset className="fieldset">
-                            <span className="text-lg">Available Quantity</span>
+                            <span className="text-lg text-gray-800">Available Quantity</span>
                             <input type="text" name="quantity" defaultValue={quantity} className="input w-full" placeholder="Available Quantity" />
                         </fieldset>
                     </div>
@@ -62,13 +62,13 @@ const UpdateCoffee = () => {
                 <div className="md:flex gap-4 items-center justify-center">
                     <div className="md:w-1/2">
                         <fieldset className="fieldset">
-                            <span className="text-lg">Supplier Name</span>
+                            <span className="text-lg text-gray-800">Supplier Name</span>
                             <input type="text" name="supplier" defaultValue={supplier} className="input w-full" placeholder="Supplier Name" />
                         </fieldset>
                     </div>
                     <div className="md:w-1/2">
                         <fieldset className="fieldset">
-                            <span className="text-lg">Taste</span>
+                            <span className="text-lg text-gray-800">Taste</span>
                             <input type="text" name="taste" defaultValue={taste} className="input w-full" placeholder="Taste" />
                         </fieldset>
                     </div>
@@ -77,13 +77,13 @@ const UpdateCoffee = () => {
                 <div className="md:flex gap-4 items-center justify-center">
                     <div className="md:w-1/2">
                         <fieldset className="fieldset">
-                            <span className="text-lg">Category</span>
+                            <span className="text-lg text-gray-800">Category</span>
                             <input type="text" name="category" defaultValue={category} className="input w-full" placeholder="Category" />
                         </fieldset>
                     </div>
                     <div className="md:w-1/2">
                         <fieldset className="fieldset">
-                            <span className="text-lg">Details</span>
+                            <span className="text-lg text-gray-800">Details</span>
                             <input type="text" name="details" defaultValue={details} className="input w-full" placeholder="Details" />
                         </fieldset>
                     </div>
@@ -92,7 +92,7 @@ const UpdateCoffee = () => {
                 <div className="md:flex gap-4 items-center justify-center">
                     <div className="md:w-full">
                         <fieldset className="fieldset">
-                            <span className="text-lg">Photo URL</span>
+                            <span className="text-lg text-gray-800">Photo URL</span>
                             <input type="text" name="photo" defaultValue={photo} className="input w-full" placeholder="Photo URL" />
                         </fieldset>
                     </div>
