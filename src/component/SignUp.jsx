@@ -17,7 +17,7 @@ const SignUp = () => {
                 console.log(result.user);
                 const creationTime = result?.user?.metadata?.creationTime;
                 const newUser = { name, email, creationTime }
-                fetch("http://localhost:5000/users", {
+                fetch("https://coffe-store-backend-three.vercel.app/users", {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"
@@ -40,7 +40,7 @@ const SignUp = () => {
     return (
         <div className='flex justify-center items-center'>
             <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 bg-gray-50 text-gray-800">
-                <h2 className="mb-3 text-3xl font-semibold text-center">Sign Up</h2>
+                <h2 className="mb-3 text-3xl font-semibold text-center">Sign Up or Register New User</h2>
                 <p className="text-sm text-center text-gray-600">Already have an account?
                     <Link to="/signIn" rel="noopener noreferrer" className="text-indigo-600 focus:underline hover:underline hover:text-indigo-700"> Sign in here</Link>
                 </p>

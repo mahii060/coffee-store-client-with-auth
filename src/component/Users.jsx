@@ -21,7 +21,7 @@ const Users = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/users/${_id}`, {
+                fetch(`https://coffe-store-backend-three.vercel.app/users/${_id}`, {
                     method: "DELETE",
                 })
                     .then(res => res.json())
@@ -39,11 +39,6 @@ const Users = () => {
 
             }
         });
-
-
-
-
-
     }
     return (
         <div>
@@ -53,6 +48,7 @@ const Users = () => {
                     {/* head */}
                     <thead>
                         <tr>
+                            <th></th>
                             <th>ID</th>
                             <th>Name</th>
                             <th>Email</th>
@@ -63,11 +59,11 @@ const Users = () => {
                     </thead>
                     <tbody>
                         {/* row 1 */}
-                        {users.map(user => <tr key={user._id}>
+                        {users.map((user, index) => <tr key={user._id}>
+                            <th>{index + 1}</th>
                             <th>{user._id}</th>
                             <td>{user.name}</td>
                             <td>{user.email}</td>
-                            {/* {user.lastSignInTime ? <td>{user.lastSignInTime}</td> : <td>Not logged in yet</td>} */}
                             <td>{user.lastSignInTime}</td>
                             <td>{user.creationTime}</td>
                             <td className='space-x-2'>

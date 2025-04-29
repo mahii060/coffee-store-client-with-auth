@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const CoffeeCard = ({ coffee, setCoffees }) => {
-    const { _id, name, quantity, supplier, taste, category, details, photo } = coffee;
+    const { _id, name, quantity, supplier, taste, photo } = coffee;
 
     const handleDelete = _id => {
         Swal.fire({
@@ -15,7 +15,7 @@ const CoffeeCard = ({ coffee, setCoffees }) => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/coffee/${_id}`, {
+                fetch(`https://coffe-store-backend-three.vercel.app/coffee/${_id}`, {
                     method: "DELETE",
                 })
                     .then(res => res.json())
@@ -27,7 +27,7 @@ const CoffeeCard = ({ coffee, setCoffees }) => {
                                 icon: "success"
                             });
                     })
-                // 🟢 Remove from UI
+                // Remove from UI
                 setCoffees((prevCoffees) => prevCoffees.filter(coffee => coffee._id !== _id)
                 );
 
